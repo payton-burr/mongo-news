@@ -1,0 +1,56 @@
+#articles {
+  display: inline-block;
+  overflow: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 60%;
+  margin-left: 50px;
+}
+
+#articles p {
+  cursor: pointer;
+}
+
+#articles a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+#notes {
+  float: right;
+  width: 30%;
+  margin-right: 100px;
+}
+
+button#savenote {
+  background-color: rgb(78, 177, 223);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 4px;
+}
+textarea, input {
+  display: block;
+  width: 80%;
+  margin: 5px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+input {
+  height: 36px;
+  font-size: 24px;
+}
+textarea {
+  height: 100px;
+  font-size: 18px;
+}
