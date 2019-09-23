@@ -17,28 +17,28 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.get('/scrape', function(req, res) {
-//     axios.get('').then(function(response) {
-//         let $ = cheerio.load(response.data);
+app.get('/scrape', function(req, res) {
+    axios.get('').then(function(response) {
+        let $ = cheerio.load(response.data);
 
-//         $('').each(function(i, element) {
-//             let result = {}
+        $('').each(function(i, element) {
+            let result = {}
 
-//             result.title = $(this)
-//             result.link = $(this)
+            result.title = $(this)
+            result.link = $(this)
 
-//             console.log(result.title);
-//             console.log(result.link);
+            console.log(result.title);
+            console.log(result.link);
 
-//             db.Article.create(result).then(function(dbArticle) {
-//                 console.log(dbArticle)
-//             }).catch(function(err) {
-//                 console.log(err);
-//             });
-//         });
-//         res.send("Scrape Compete");
-//     });
-// });
+            db.Article.create(result).then(function(dbArticle) {
+                console.log(dbArticle)
+            }).catch(function(err) {
+                console.log(err);
+            });
+        });
+        res.send("Scrape Compete");
+    });
+});
 
 app.get('/articles', function(req, res) {
     db.Article.find({}).then(function(dbArticle) {
