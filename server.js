@@ -12,13 +12,7 @@ app.use(express.json());
 
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoNews";
 
-mongoose.connect(MONGODB_URI, function(err) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('mongoose connected');
-    }
-});
+mongoose.connect(MONGODB_URI);
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
